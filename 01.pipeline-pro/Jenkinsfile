@@ -6,7 +6,7 @@ pipeline {
         } 
     }
     environment { 
-        GREETINGS = 'hello-jenkins'
+        GREETINGS = 'welcome-jenkins'
     }
     options {
         timeout(time: 1, unit: 'HOURS') 

@@ -9,7 +9,7 @@ pipeline {
         GREETINGS = 'hello-jenkins'
     }
     options {
-        timeout(time: 1, unit: 'SECONDS') 
+        timeout(time: 1, unit: 'HOURS') 
     }
 
     stages {
@@ -28,7 +28,11 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo "Deploying the code"
+                sh """
+                    echo "Deploying"
+                    sleep 10
+                """
+                
             }
         }
     }

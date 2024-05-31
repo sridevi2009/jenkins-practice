@@ -19,7 +19,7 @@ pipeline {
             steps {
                 sh """
                     echo "HI im devops team"
-                    env
+                    echo "$GREETINGS"
                 """
             }
         }

@@ -6,7 +6,7 @@ pipeline {
         } 
     }
     environment { 
-        GREETINGS = 'DEV'
+        GREETINGS = 'hello-jenkins'
     }
 
     stages {
@@ -19,7 +19,7 @@ pipeline {
             steps {
                 sh """
                     echo "HI im devops team"
-                    $GREETINGS
+                    env
                 """
             }
         }

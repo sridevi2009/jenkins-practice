@@ -5,6 +5,9 @@ pipeline {
             
         } 
     }
+    environment { 
+        GREETINGS = 'DEV'
+    }
 
     stages {
         stage('clone code') {
@@ -14,7 +17,10 @@ pipeline {
         }
         stage('build code') {
             steps {
-                echo "building the code"
+                sh """
+                    echo "HI im devops team"
+                    env
+                """
             }
         }
         stage('Deploy') {

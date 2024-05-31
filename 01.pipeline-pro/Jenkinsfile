@@ -4,7 +4,8 @@ pipeline {
             label 'Agent-1'
             
         } 
-    }       
+    }
+
     stages {
         stage('clone code') {
             steps {
@@ -20,6 +21,20 @@ pipeline {
             steps {
                 echo "Deploying the code"
             }
+        }
+    }
+    post { 
+        always { 
+            echo 'I will always say Hello again!'
+        }
+        success { 
+            echo 'SUCCESS'
+        }
+        failure { 
+            echo 'FAILS'
+        }
+        aborted { 
+            echo 'ABBORTED!'
         }
     }
 }

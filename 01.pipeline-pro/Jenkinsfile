@@ -8,6 +8,9 @@ pipeline {
     environment { 
         GREETINGS = 'hello-jenkins'
     }
+    options {
+        timeout(time: 1, unit: 'SECONDS') 
+    }
 
     stages {
         stage('clone code') {

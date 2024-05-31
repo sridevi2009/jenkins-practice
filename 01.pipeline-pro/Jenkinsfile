@@ -41,7 +41,7 @@ pipeline {
             steps {
                 sh """
                     echo "Deploying"
-                    sleep 10
+                   # sleep 10
                 """
                 
             }
